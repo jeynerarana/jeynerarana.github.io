@@ -1,19 +1,68 @@
-name = 'Terminal'
-license = 'MPL-2.0'
-licenselink = 'https://github.com/techbarrack/terminal-hugo-theme/blob/master/LICENSE'
-description = 'Terminal is a theme inspired by the cobalt 2 theme for terminal on macOS. It uses tailwind CSS to achieve the look and feel'
+baseURL: 'https://jeynerarana.github.io/'
+languageCode: 'en-us'
+title: 'My Website'
+theme: 'terminal'
+timeZone: "Asia/Kolkata"
+menus:
+  main:
+    - identifier: about
+      name: About
+      url: /about.html
+      weight: 20
+    - identifier: blog
+      name: Blog
+      url: /blog
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags
+      weight: 40
+paginate: 10
+permalinks:
+  blog: "/blog/:year/:month/:day/:title/"
+taxonomies:
+  tag: "tags"
+  author: "authors"
+indexes:
+  tag: "tags"
+markup:
+  defaultMarkdownHandler: "goldmark"
+  goldmark:
+    # Enable or disable smartypants (automatic conversion of ASCII punctuation to smart punctuation)
+    smartypants: true
+    # Enable or disable fractions (automatic conversion of fractions)
+    fractions: true
+    # Enable or disable superscript and subscript support
+    # (enable to allow ^ and ~ for superscript and subscript)
+    superscript: true
+    unsafe: true
+# ignoreFiles:
+#   - "themes/terminal/content"
+# outputs:
+#   blog:
+#     - HTML
+#     - RSS
+#     - sitemap-blog.xml
+#   home:
+#     - HTML
+#     - RSS
+#     - sitemap.xml
+params:
+  social:
+    - name: github
+      url: https://github.com/myusername
+    - name: x
+      url: https://x.com/myusername
+    - name: youtube
+      url: https://youtube.com/myusername
+    - name: linkedin
+      url: https://linkedin.com/in/myusername
+    - name: "buy me a coffee"
+      url: https://www.buymeacoffee.com/myusername
+  disqus: "mydisquscode"
 
-# The home page of the theme, where the source can be found
-homepage = 'https://github.com/techbarrack/terminal-hugo-theme'
+module:
+  hugoVersion:
+    extended: false
+    min: "0.116.0"
 
-# If you have a running demo of the theme
-demosite = 'https://nayanseth.com'
-
-# Taxonomy terms
-tags = ['blog', 'personal', 'responsive', 'terminal', 'dark mode', 'minimal', 'dark']
-features = ['blog', 'personal', 'responsive', 'terminal', 'dark mode', 'minimal', 'dark', 'hugo', 'shortcodes', 'tailwind', 'markdown']
-
-# If the theme has a single author
-[author]
-  name = 'Nayan Seth'
-  homepage = 'https://nayanseth.com'
